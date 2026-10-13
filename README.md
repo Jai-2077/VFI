@@ -1,12 +1,3 @@
-![Animated evaluation metrics and timing](assets/category-bars.svg)
-
-![Animated residual correction network](assets/correction.svg)
-
-![Animated motion category illustrations](assets/motion-categories.svg)
-
-![Animated end-to-end workflow](assets/workflow.svg)
-
-![Animated motion-aware VFI research pipeline](assets/hero.svg)
 
 <div align="center">
 
