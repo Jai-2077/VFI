@@ -233,10 +233,6 @@ If you build on this repository, cite the accompanying project report:
 }
 ```
 
-## 📄 License and model/data attribution
-
-This README does not establish a license for the project, the pretrained checkpoints, or the datasets. Before redistribution, add the project's chosen license and check the individual terms for each model checkpoint and dataset.
-
 ---
 
 <div align="center">
