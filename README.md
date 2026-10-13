@@ -9,7 +9,7 @@
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.13-FF6F00?logo=tensorflow&logoColor=white)](#)
 [![Models](https://img.shields.io/badge/Baselines-RIFE%20%7C%20FILM%20%7C%20IFRNet-7C3AED)](#)
 
-<img src="documentation/assets/vfi-pipeline.svg" alt="Animated motion-aware VFI pipeline" width="100%" />
+<img src="/assets/vfi-pipeline.svg" alt="Animated motion-aware VFI pipeline" width="100%" />
 
 </div>
 
@@ -90,7 +90,7 @@ For full paired-result tables and confidence intervals, see [the improvement sum
 
 | File | Purpose |
 |---|---|
-| [VFI project paper](notebooks/VFI.pdf) | Full methodology, equations, experimental protocol, and discussion |
+| [VFI project paper](/VFI.pdf) | Full methodology, equations, experimental protocol, and discussion |
 | [RAFT diagnosis notebook](notebooks/raft-vfi.ipynb) | Descriptor extraction, calibration, final category classification, and diagnostic scoring |
 | [RIFE notebook](notebooks/rife-bp-cnn.ipynb) | Frozen RIFE baseline and correction experiments |
 | [FILM notebook](notebooks/film-vfi-3-10-env.ipynb) | Frozen FILM baseline and correction experiments |
