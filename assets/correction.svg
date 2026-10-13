@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="430" viewBox="0 0 1000 430" role="img" aria-labelledby="t d">
+<title id="t">Lightweight residual correction network</title><desc id="d">Three RGB frames are concatenated into a nine-channel tensor, processed by a correction CNN, and combined with the baseline interpolation using a residual and confidence mask.</desc>
+<style>
+text{font-family:Inter,Arial,sans-serif}.title{font-size:22px;font-weight:700;fill:#f8fafc}.label{font-size:15px;font-weight:700;fill:#f8fafc}.sub{font-size:12px;fill:#b8c7dd}.box{fill:#101e33;stroke:#34516f;stroke-width:1.5}.arrow{stroke:#67e8f9;stroke-width:2.5;fill:none;stroke-dasharray:7 7;animation:dash 2s linear infinite}.pulse{animation:pulse 2.5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.scan{animation:scan 2.8s ease-in-out infinite}@keyframes dash{to{stroke-dashoffset:-28}}@keyframes pulse{0%,100%{opacity:.8;transform:scale(1)}50%{opacity:1;transform:scale(1.025)}}@keyframes scan{0%,100%{transform:translateX(0);opacity:.2}50%{transform:translateX(45px);opacity:.9}}@media(prefers-reduced-motion:reduce){.arrow,.pulse,.scan{animation:none}}
+</style>
+<rect width="1000" height="430" rx="24" fill="#08111f"/>
+<text x="34" y="42" class="title">Lightweight residual correction</text><text x="34" y="66" class="sub">The frozen VFI model generates Iᵇ; the correction CNN predicts a residual and confidence mask.</text>
+<g transform="translate(32 100)">
+ <rect width="180" height="228" rx="16" class="box"/><text x="18" y="30" class="label">Input tensor</text><text x="18" y="50" class="sub">3 RGB frames</text>
+ <g transform="translate(18 70)"><rect width="42" height="66" rx="6" fill="#142d4a" stroke="#22d3ee"/><circle cx="21" cy="20" r="8" fill="#fbbf24"/><path d="M21 29l-6 14m6-14 7 14" stroke="#67e8f9" stroke-width="2"/><text x="21" y="57" class="sub" text-anchor="middle">I₀</text></g>
+ <g transform="translate(69 70)"><rect width="42" height="66" rx="6" fill="#1b2450" stroke="#818cf8"/><circle cx="21" cy="20" r="8" fill="#fbbf24"/><path d="M21 29l-6 14m6-14 7 14" stroke="#a5b4fc" stroke-width="2"/><text x="21" y="57" class="sub" text-anchor="middle">Iᵇ</text></g>
+ <g transform="translate(120 70)"><rect width="42" height="66" rx="6" fill="#142d4a" stroke="#22d3ee"/><circle cx="21" cy="20" r="8" fill="#fbbf24"/><path d="M21 29l-6 14m6-14 7 14" stroke="#67e8f9" stroke-width="2"/><text x="21" y="57" class="sub" text-anchor="middle">I₁</text></g>
+ <text x="90" y="164" class="label" text-anchor="middle">9 channels</text><text x="90" y="186" class="sub" text-anchor="middle">[I₀, Iᵇ, I₁]</text><text x="90" y="205" class="sub" text-anchor="middle">RGB concatenation</text>
+</g>
+<path d="M215 215H254" class="arrow"/>
+<g class="pulse">
+ <rect x="260" y="100" width="200" height="228" rx="16" class="box"/><text x="280" y="130" class="label">Correction CNN</text><text x="280" y="150" class="sub">3×3 convolutions</text>
+ <g transform="translate(285 172)"><rect width="150" height="26" rx="6" fill="#153c52" stroke="#22d3ee"/><rect width="150" height="26" rx="6" fill="#153c52" stroke="#22d3ee" opacity=".55" transform="translate(0 9)"/><rect width="150" height="26" rx="6" fill="#153c52" stroke="#22d3ee" opacity=".3" transform="translate(0 18)"/></g>
+ <text x="360" y="244" class="label" text-anchor="middle">Residual + mask</text><text x="360" y="265" class="sub" text-anchor="middle">learned refinement</text><path d="M290 289H430" stroke="#34516f"/><text x="360" y="309" class="sub" text-anchor="middle">compact post-processor</text>
+</g>
+<path d="M463 215H504" class="arrow"/>
+<g transform="translate(510 100)">
+ <rect width="200" height="228" rx="16" class="box"/><text x="20" y="30" class="label">Predicted outputs</text>
+ <rect x="20" y="54" width="160" height="54" rx="9" fill="#211e46" stroke="#8b5cf6"/><text x="100" y="77" class="label" text-anchor="middle">Residual R</text><text x="100" y="95" class="sub" text-anchor="middle">RGB correction</text>
+ <rect x="20" y="122" width="160" height="54" rx="9" fill="#103743" stroke="#22d3ee"/><text x="100" y="145" class="label" text-anchor="middle">Mask M</text><text x="100" y="163" class="sub" text-anchor="middle">confidence map</text>
+ <text x="100" y="204" class="sub" text-anchor="middle">M weights R spatially</text>
+</g>
+<path d="M713 215H754" class="arrow"/>
+<g class="pulse">
+ <rect x="760" y="100" width="208" height="228" rx="16" fill="#10352f" stroke="#34d399" stroke-width="1.7"/><text x="780" y="130" class="label">Corrected frame</text>
+ <rect x="790" y="151" width="148" height="88" rx="10" fill="#0b2425" stroke="#34d399"/><circle cx="864" cy="180" r="13" fill="#fbbf24"/><path d="M864 194l-12 22m12-22 12 22m-12-22v28" stroke="#6ee7b7" stroke-width="4" stroke-linecap="round"/><rect x="794" y="155" width="5" height="80" rx="2" fill="#6ee7b7" class="scan"/>
+ <text x="864" y="267" class="label" text-anchor="middle">Iᶜ = Iᵇ + M ⊙ R</text><text x="864" y="290" class="sub" text-anchor="middle">refined interpolation</text>
+</g>
+<text x="500" y="382" class="sub" text-anchor="middle">Ground-truth intermediate frames are used for training targets and evaluation—not as inference inputs.</text>
+<text x="500" y="405" class="sub" text-anchor="middle">Frozen VFI weights · trainable correction network</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="480" viewBox="0 0 1000 480" role="img" aria-labelledby="t d">
+<title id="t">Four motion categories</title><desc id="d">Animated vector sketches illustrate near-linear, rotational or curved, occlusion-heavy, and non-rigid motion.</desc>
+<style>
+text{font-family:Inter,Arial,sans-serif}.h{fill:#f8fafc;font-size:20px;font-weight:700}.p{fill:#b8c7dd;font-size:13px}.card{fill:#0d1a2d;stroke:#29415f;stroke-width:1.5}.arrow{stroke-width:3;fill:none;stroke-linecap:round;stroke-dasharray:7 7;animation:flow 1.7s linear infinite}.move{animation:move 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.spin{animation:spin 5s linear infinite;transform-box:fill-box;transform-origin:center}.blink{animation:blink 2.3s ease-in-out infinite}@keyframes flow{to{stroke-dashoffset:-28}}@keyframes move{0%,100%{transform:translateX(-4px)}50%{transform:translateX(8px)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}@media(prefers-reduced-motion:reduce){.arrow,.move,.spin,.blink{animation:none}}
+</style>
+<rect width="1000" height="480" rx="24" fill="#08111f"/>
+<text x="38" y="48" class="h">Motion categories used for diagnostic analysis</text><text x="38" y="72" class="p">Operational groups based on flow characteristics and the project's labeling protocol</text>
+<g transform="translate(32 102)">
+ <rect width="450" height="158" rx="18" class="card"/><text x="22" y="34" class="h">01 · Near-linear</text><text x="22" y="56" class="p">Coherent directional displacement</text>
+ <g transform="translate(25 75)"><rect width="400" height="58" rx="9" fill="#091525" stroke="#29415f"/><g class="move"><circle cx="44" cy="28" r="10" fill="#fbbf24"/><path d="M44 40l-6 12m6-12 7 12m-7-12v14" stroke="#67e8f9" stroke-width="3" stroke-linecap="round"/></g><path class="arrow" d="M95 29H170" stroke="#67e8f9"/><path class="arrow" d="M195 29H270" stroke="#67e8f9" style="animation-delay:.4s"/><path class="arrow" d="M295 29H365" stroke="#67e8f9" style="animation-delay:.8s"/></g>
+</g>
+<g transform="translate(518 102)">
+ <rect width="450" height="158" rx="18" class="card"/><text x="22" y="34" class="h">02 · Rotation / curved</text><text x="22" y="56" class="p">Local flow direction changes across the scene</text>
+ <g transform="translate(25 75)"><rect width="400" height="58" rx="9" fill="#091525" stroke="#29415f"/><g class="spin"><circle cx="200" cy="29" r="20" stroke="#a78bfa" stroke-width="2" fill="none" stroke-dasharray="5 5"/><path d="M200 6l8 9-12 1" stroke="#c4b5fd" stroke-width="3" fill="none"/><path d="M200 29h62M200 29l-42-21M200 29l-30 26" stroke="#a78bfa" stroke-width="2"/></g></g>
+</g>
+<g transform="translate(32 282)">
+ <rect width="450" height="158" rx="18" class="card"/><text x="22" y="34" class="h">03 · Occlusion-heavy</text><text x="22" y="56" class="p">Regions become hidden or newly visible</text>
+ <g transform="translate(25 75)"><rect width="400" height="58" rx="9" fill="#091525" stroke="#29415f"/><rect x="18" y="11" width="84" height="36" rx="6" fill="#164e63" stroke="#22d3ee"/><rect x="83" y="5" width="52" height="48" rx="5" fill="#f59e0b" opacity=".9"/><path class="arrow" d="M145 29H205" stroke="#fbbf24"/><rect x="220" y="11" width="84" height="36" rx="6" fill="#164e63" stroke="#22d3ee"/><rect x="270" y="5" width="52" height="48" rx="5" fill="#f59e0b" opacity=".9"/><path d="M335 9l20 40M355 9l-20 40" stroke="#fb7185" stroke-width="2" class="blink"/></g>
+</g>
+<g transform="translate(518 282)">
+ <rect width="450" height="158" rx="18" class="card"/><text x="22" y="34" class="h">04 · Non-rigid</text><text x="22" y="56" class="p">Deformation varies across parts of an object</text>
+ <g transform="translate(25 75)"><rect width="400" height="58" rx="9" fill="#091525" stroke="#29415f"/><path d="M25 16q20-15 40 0t40 0t40 0M25 29q20-15 40 0t40 0t40 0M25 42q20-15 40 0t40 0t40 0" stroke="#34d399" stroke-width="2" fill="none" opacity=".65"/><path class="arrow" d="M175 29q22-28 45 0t45 0" stroke="#6ee7b7"/><path d="M290 14q25 0 25 15t-25 15t-25-15t25-15" stroke="#6ee7b7" stroke-width="2" fill="none" class="move"/></g>
+</g>
+</svg>

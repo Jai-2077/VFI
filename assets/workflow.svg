@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="430" viewBox="0 0 1100 430" role="img" aria-labelledby="t d">
+<title id="t">Research workflow</title><desc id="d">Animated six-stage workflow from dataset preparation to motion diagnosis, frozen-model benchmarking, correction experiments, and metric reporting.</desc>
+<style>
+text{font-family:Inter,Arial,sans-serif}.title{font-size:23px;font-weight:700;fill:#f8fafc}.h{font-size:16px;font-weight:700;fill:#f8fafc}.p{font-size:12px;fill:#b8c7dd}.card{fill:#101e33;stroke:#34516f;stroke-width:1.4}.arrow{stroke:#67e8f9;stroke-width:2.3;stroke-dasharray:7 7;fill:none;animation:dash 1.8s linear infinite}.pulse{animation:pulse 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes dash{to{stroke-dashoffset:-28}}@keyframes pulse{0%,100%{opacity:.75;transform:scale(1)}50%{opacity:1;transform:scale(1.035)}}@media(prefers-reduced-motion:reduce){.arrow,.pulse{animation:none}}
+</style>
+<rect width="1100" height="430" rx="24" fill="#08111f"/><text x="32" y="42" class="title">End-to-end experimental workflow</text>
+<g class="pulse"><rect x="32" y="82" width="300" height="118" rx="16" class="card"/><text x="54" y="113" class="h">01 · Dataset &amp; splits</text><text x="54" y="140" class="p">Vimeo-90K · DAVIS</text><text x="54" y="161" class="p">Train / calibration / test</text><text x="54" y="182" class="p">Keep source videos split-safe</text></g>
+<path d="M334 140H380" class="arrow"/>
+<g class="pulse"><rect x="386" y="82" width="300" height="118" rx="16" class="card"/><text x="408" y="113" class="h">02 · Motion diagnosis</text><text x="408" y="140" class="p">RAFT flow + descriptors</text><text x="408" y="161" class="p">Four operational categories</text><text x="408" y="182" class="p">Category-wise error profiles</text></g>
+<path d="M688 140H734" class="arrow"/>
+<g class="pulse"><rect x="740" y="82" width="328" height="118" rx="16" class="card"/><text x="762" y="113" class="h">03 · Frozen baselines</text><text x="762" y="140" class="p">RIFE · FILM · IFRNet</text><text x="762" y="161" class="p">Generate intermediate frames</text><text x="762" y="182" class="p">Record baseline quality / timing</text></g>
+<path d="M904 202V245H734" class="arrow"/>
+<g class="pulse"><rect x="740" y="250" width="328" height="118" rx="16" class="card"/><text x="762" y="281" class="h">04 · Correction experiments</text><text x="762" y="308" class="p">Generic vs motion-targeted</text><text x="762" y="329" class="p">Residual + confidence mask</text><text x="762" y="350" class="p">Frozen backbone, train CNN</text></g>
+<path d="M738 309H692" class="arrow"/>
+<g class="pulse"><rect x="386" y="250" width="300" height="118" rx="16" class="card"/><text x="408" y="281" class="h">05 · Quantitative evaluation</text><text x="408" y="308" class="p">PSNR · SSIM · LPIPS</text><text x="408" y="329" class="p">Latency / model comparisons</text><text x="408" y="350" class="p">Per-category breakdown</text></g>
+<path d="M384 309H338" class="arrow"/>
+<g class="pulse"><rect x="32" y="250" width="300" height="118" rx="16" class="card"/><text x="54" y="281" class="h">06 · Reproducible reporting</text><text x="54" y="308" class="p">Tables + visualizations</text><text x="54" y="329" class="p">Model-specific observations</text><text x="54" y="350" class="p">Document setup and limitations</text></g>
+</svg>
