@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Motion-aware video frame interpolation pipeline</title>
+  <desc id="desc">Two input frames flow through RAFT diagnosis, frozen interpolation models, and a lightweight residual correction stage to produce a corrected middle frame.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#071427"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-40%" width="160%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <g opacity=".16" stroke="#93c5fd"><path d="M0 70h1200M0 140h1200M0 210h1200M0 280h1200"/><path d="M100 0v360M250 0v360M400 0v360M550 0v360M700 0v360M850 0v360M1000 0v360M1150 0v360"/></g>
+  <text x="64" y="66" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="27" font-weight="700">Motion-aware video frame interpolation</text>
+  <text x="64" y="96" fill="#94a3b8" font-family="Arial, sans-serif" font-size="16">Diagnose → interpolate → refine</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(64 145)">
+      <rect width="170" height="128" rx="18" fill="#0f2747" stroke="#38bdf8" stroke-width="2"/>
+      <rect x="18" y="21" width="58" height="48" rx="8" fill="#0ea5e9" opacity=".75"/>
+      <rect x="91" y="21" width="58" height="48" rx="8" fill="#8b5cf6" opacity=".75"/>
+      <text x="85" y="97" text-anchor="middle" fill="white" font-size="16" font-weight="700">Input frames</text>
+      <text x="85" y="116" text-anchor="middle" fill="#bae6fd" font-size="13">I₀ · I₁</text>
+    </g>
+    <g transform="translate(310 145)">
+      <rect width="190" height="128" rx="18" fill="#162143" stroke="#60a5fa" stroke-width="2"/>
+      <circle cx="95" cy="46" r="22" fill="none" stroke="#60a5fa" stroke-width="5" stroke-dasharray="6 6"><animateTransform attributeName="transform" type="rotate" from="0 95 46" to="360 95 46" dur="6s" repeatCount="indefinite"/></circle>
+      <text x="95" y="97" text-anchor="middle" fill="white" font-size="16" font-weight="700">RAFT diagnosis</text>
+      <text x="95" y="116" text-anchor="middle" fill="#bfdbfe" font-size="13">motion categories</text>
+    </g>
+    <g transform="translate(577 145)">
+      <rect width="208" height="128" rx="18" fill="#202044" stroke="#a78bfa" stroke-width="2"/>
+      <text x="104" y="48" text-anchor="middle" fill="#ddd6fe" font-size="15">Frozen baselines</text>
+      <text x="104" y="78" text-anchor="middle" fill="white" font-size="20" font-weight="700">RIFE · FILM · IFRNet</text>
+      <text x="104" y="110" text-anchor="middle" fill="#c4b5fd" font-size="13">interpolated frame Iᵦ</text>
+    </g>
+    <g transform="translate(862 145)">
+      <rect width="270" height="128" rx="18" fill="#143443" stroke="#2dd4bf" stroke-width="2"/>
+      <path d="M44 48h42l10-15 12 31 12-18h44" fill="none" stroke="#2dd4bf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="154" y="97" text-anchor="middle" fill="white" font-size="16" font-weight="700">Residual correction</text>
+      <text x="154" y="116" text-anchor="middle" fill="#99f6e4" font-size="13">Iᶜ = Iᵦ + M ⊙ R</text>
+    </g>
+  </g>
+  <g fill="none" stroke="url(#accent)" stroke-width="3" filter="url(#glow)">
+    <path d="M240 209h55"/><path d="M506 209h55"/><path d="M791 209h55"/>
+  </g>
+  <g fill="#e0f2fe"><circle r="5"><animateMotion dur="3s" repeatCount="indefinite" path="M240 209h605"/></circle></g>
+</svg>
